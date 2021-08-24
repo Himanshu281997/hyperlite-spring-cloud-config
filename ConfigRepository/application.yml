@@ -1,0 +1,23 @@
+spring:
+  profiles: test1
+
+cxg7:
+  jwt:
+    enabled: false
+
+hyperlite:
+  graph:
+    neo4j:
+      uri: bolt+routing://dlomt13z.test.intranet:7687
+      uris:
+        - bolt+routing://dlomt12z.test.intranet:7687
+        - bolt+routing://dlomt11z.test.intranet:7687
+      username: hyperlite_app
+      password: hyperlite_app
+      connectionPoolSize: 3
+      connectionLivenessCheckTimeout: 60000
+      verifyConnection: true
+      autoIndex: none
+      trustStrategy: TRUST_ON_FIRST_USE
+      trustCertFile: file:///tmp/cert
+      encryptionLevel: NONE
